@@ -36,7 +36,7 @@ handler.queryEntry = function(msg, session, next) {
 	var res = connectors[0];
 	next(null, {
 		code: 200,
-		host: "www.leebing.cn",//res.host,
+		host: res.host,
 		port: res.clientPort
 	});
 };
