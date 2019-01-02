@@ -12,6 +12,46 @@
         <script type="text/javascript"> 
         require('boot');
         </script> 
+        <script type="text/javascript">
+// var mobileAgent = new Array("iphone", "ipod", "ipad", "android", "mobile", "blackberry", "webos", "incognito", "webmate", "bada", "nokia", "lg", "ucweb", "skyfire");
+
+    // var browser = navigator.userAgent.toLowerCase(); 
+        var system   = {}; 
+        var platform = navigator.platform;      
+        system.win = platform.indexOf("Win") == 0; 
+        system.mac = platform.indexOf("Mac") == 0; 
+        system.x11 = (platform == "X11") || (platform.indexOf("Linux") == 0);    
+        if(system.win||system.mac||system.xll){
+            system.phone = false;
+        }else{d
+            system.phone = true;
+        }
+    
+
+// // show login panel
+// function showLogin() {
+//     $("#loginView").show();
+//     $("#chatHistory").hide();
+//     $("#toolbar").hide();
+//     $("#loginError").hide();
+//     $("#loginUser").focus();
+// };
+//窗口大小变更
+$(window).resize(function () {          //当浏览器大小变化时
+    alert($(window).height());          //浏览器时下窗口可视区域高度
+    alert($(document).height());        //浏览器时下窗口文档的高度
+    alert($(document.body).height());   //浏览器时下窗口文档body的高度
+    alert($(document.body).outerHeight(true)); //浏览器时下窗口文档body的总高度 包括border padding margin
+});
+
+
+$(document).ready(function() {
+    alert('浏览器类型'+system.phone);
+})
+
+
+
+</script>
     <body>
 
             <img class="avatar"  src="./image/1.png"  alt="李大锤子" />
@@ -32,7 +72,7 @@
                             <a href="/about/">关于</a>
                         </li> 
                         <li class="navbar-item">
-                            <a href="https://blog.zengrong.net" target="_blank">BLOG</a>
+                            <a href="https://www.baidu.com" target="_blank">BLOG</a>
                         </li>
                     </ul>
                 </nav>
