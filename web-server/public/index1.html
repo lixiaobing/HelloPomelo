@@ -38,26 +38,30 @@
 // };
 //窗口大小变更
 $(window).resize(function () {          //当浏览器大小变化时
-    alert($(window).height());          //浏览器时下窗口可视区域高度
-    alert($(document).height());        //浏览器时下窗口文档的高度
-    alert($(document.body).height());   //浏览器时下窗口文档body的高度
-    alert($(document.body).outerHeight(true)); //浏览器时下窗口文档body的总高度 包括border padding margin
+    // alert($(window).height());          //浏览器时下窗口可视区域高度
+    // alert($(document).height());        //浏览器时下窗口文档的高度
+    // alert($(document.body).height());   //浏览器时下窗口文档body的高度
+    // alert($(document.body).outerHeight(true)); //浏览器时下窗口文档body的总高度 包括border padding margin
+    console.log($(document.body).height())
 });
 
 
 $(document).ready(function() {
-    alert('浏览器类型'+system.phone);
+    // alert('浏览器类型'+system.phone);
 })
 
 
 
 </script>
-    <body>
-
-            <img class="avatar"  src="./image/1.png"  alt="李大锤子" />
-            <h1 id="index-header-title">LDCZ's HOME</h1>
-            <div id="toolbar">
-                 <nav>
+    <body style="text-align:center">
+            <div style="width:100%;top:300;background: #440077;">
+                <img class="avatar"  src="./image/1.png"  alt="李大锤子" />
+            </div>
+            <div style="width:100%;top:100;background: #000077;">
+                <h1 id="index-header-title">LDCZ's HOME</h1>
+            </div>
+            <div class="box1">
+                 <nav >
                     <ul class="navbar-menu">
                         <li class="navbar-item is-hoverable">
                             <a href="/read/">阅读</a>
