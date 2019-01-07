@@ -2,46 +2,93 @@
 function showBottomBar()
 {
  
-/*document.body.clientHeight*/ 
   var clientWidht = document.body.clientWidth ;
-  if (clientWidht >700) 
+  if (clientWidht >1136) 
   {
-    $("#bottomBar_2").hide();
-    $("#bottomBar_1").show();
+    $("#menu-vertical").hide();
+    $("#menu-horizontal").show();
     
   }else
   {
-    $("#bottomBar_2").show();
-    $("#bottomBar_1").hide();
+    $("#menu-vertical").show();
+    $("#menu-horizontal").hide();
   }
 }
 
-$(document).ready(function() {
-    // alert('浏览器类型'+system.phone);
+
+function onResize()
+{
   showBottomBar();
-});
+}
 
-$(window).resize(function () {        
-
-  console.log($(document.body).height());
+function onReady()
+{
   showBottomBar();
-  
-});
-$("#ctrButton").click(function(){
 
-  var menu = $("#menu") ;
-  menu.toggle(); 
-  //$("#ctrButton").value  = "A";
-  //alert("message:"+   menu.is(':visible') );
-  $("#ctrButton").attr('value', 'A');
-//$("#ctrButton").val("updateBt");
-  if(menu.is(':visible')) {
-   // $("#ctrButton").val(":value","A")
-    
-  } else
-  {
-    
-  }
+  //绑定按钮事件
+  $("#ctrButton").click(function(){
+
+    var menu = $("#menu") ;
+    menu.toggle(); 
+    $("#ctrButton").attr('value', 'A');
+    if(menu.is(':visible')) {
  
-});
+    } else
+    {
+      
+    }
+   
+  });
+}
+
+
+$(document).ready(onReady);
+//窗口带下变化
+$(window).resize(onResize);
+
+
+////////////////////////////
+
+
+var menu = 
+[
+  {
+    text: '阅读',
+    url: '/read/'
+  },
+  {
+    text: '项目',
+    url: '/project/'
+  },
+  {
+    text: '推荐',
+    url: '/recommend/!'
+  },
+  {
+    text: '关于',
+    url: '/about/!'
+  },
+];
+
+//vue test
+new Vue({
+    el: '#app',
+    data: {
+      message: 'Hello World!',
+     }
+})
+//vue test
+new Vue({
+  el: '#menu-bar',
+  data: {
+    message: 'Hello World!',
+    menu: menu,
+   
+    getWidth: function()
+    {
+      return document.body.clientWidth
+    }
+   }
+})
+
 
