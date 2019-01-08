@@ -62,11 +62,11 @@ var menu =
   },
   {
     text: '推荐',
-    url: '/recommend/!'
+    url: '/recommend/'
   },
   {
     text: '关于',
-    url: '/about/!'
+    url: '/about/'
   },
 ];
 
