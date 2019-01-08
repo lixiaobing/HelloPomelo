@@ -92,3 +92,12 @@ new Vue({
 })
 
 
+//////////////////////////关于
+
+new Vue({
+  el: '#about',
+  data: {
+    content: 'Hello World!',
+
+   }
+})

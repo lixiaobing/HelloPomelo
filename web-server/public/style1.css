@@ -1,71 +1,4 @@
 
-
-
-
-
-#toolbar1 {
-    position: fixed;
-    width: 100%;
-    bottom: 0;
-}
-
-#toolbar1 ul {
-    margin: 0;
-    padding: 5px 0 0 6px;
-    height: 35px;
-    list-style: none;
-}
-
-#toolbar1 li {
-    display: block;
-    float: left;
-    margin: 0 2em 0 0;
-}
-
-#toolbar1 select {
-    width: 100px;
-    height: 30px;
-    font-size: inherit;
-}
-
-
-
-
-.box1{
-    position: fixed;
-    width: 100%;
-    bottom: 0;
-    background: #442077;
-    }
-.box1 ul{
-    height: 200px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    }
-
-.box1 ul li{
-    list-style: none;
-    height: 100px;
-    margin: 0 auto;
-    }
-
-
-.image1{ 
-
-    margin-top: 100px; 
-    width:200px; 
-    height:200px; 
-    border-radius:200px; 
-}
-
-.image2{
-    margin-top: 100px; 
-    width:200px; 
-    height:200px; 
-    border-radius:20px; 
-}
-
 #index-header-title{font-weight:800;font-size:2.5rem;color:#34495e;text-shadow:2px 2px #7f8c8d}
 
 
@@ -82,29 +15,6 @@
     width:30px;height:30px;
     cursor:pointer
 }
-/*#main-article{padding:16px;background-color:#fff}*/
-
-#bottombar {
-    position: fixed;
-    width: 100%;
-    bottom: 0;
-    background: #007077;
-}
-
-
-
-
-.image{ 
-    width:150px; 
-    height:150px; 
-    border-radius:150px; 
-}
-
-.lw 
-{ 
-  font-size: 10px; 
-  text-align: center;
-}
 
 
 
@@ -113,8 +23,8 @@
   background-color: #FFFFFF;
   position: fixed;
   width: 100%;
-  left:0;
-  bottom: 0;
+  left:20px;
+  bottom: 10px;
 }
 
 .menu-horizontal ui 
@@ -171,3 +81,48 @@
     margin:-15 0;
     padding:0 0;
 }
+
+
+
+        *{margin:0; padding:0}
+
+        .container {
+            background:#FC0;
+            width:100%;
+            position:absolute;
+            z-index:100;
+            top:80px;
+            bottom:80px;
+            overflow:auto;
+            _position:relative;
+            _top:0;
+            _bottom:0;
+            _height:100%;
+            _overflow:auto
+        }
+        /* .mycontent {
+            padding:20px;
+        } */
+
+        #fixed-head {
+            height:80px;
+            line-height:80px;
+            background:#690;
+            width:100%;
+            position:absolute;
+            z-index:5;
+            top:0;
+            /* text-align:center; */
+        }
+        
+
+        #fixed-foot {
+            height:100px;
+            line-height:100px;
+            background:#690;
+            width:100%;
+            position:absolute;
+            z-index:200;
+            bottom:0;
+            text-align:center;
+        }
